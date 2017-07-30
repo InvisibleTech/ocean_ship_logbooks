@@ -10,7 +10,7 @@ defmodule OceanShipLogbooks.ShipDataController do
       select: s
 
     ships = Repo.all(query)
-    render(conn, "show_ships.json", ships)
+    render(conn, "show_ships.json", ships: ships)
   end
 
   def import_from_csv() do

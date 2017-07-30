@@ -5,7 +5,7 @@ defmodule OceanShipLogbooks.ShipDataView do
     %{ship_data: render_many(ships, OceanShipLogbooks.ShipDataView, "ship_data.json")}
   end
 
-  def render("show_ship.json", %{ship_data: ship}) do
+  def render("ship_data.json", %{ship_data: ship}) do
     {lat, lon} = ship.geom.coordinates
 
     %{ship: ship.ship,
